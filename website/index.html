@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ComprePrep MIA</title>
+  <meta name="description" content="Study guides, the full question bank with answers and explanations, practice mode and timed mock tests for the CSE1907 Comprehensive Examination.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232a78d6'/%3E%3Cpath d='M9 17.5l4.5 4.5L23 11' stroke='white' stroke-width='3.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <script>
+    // apply saved theme before first paint
+    try { var t = JSON.parse(localStorage.getItem('compreprep-mia-v1') || '{}'); if (t.settings && t.settings.theme && t.settings.theme !== 'auto') document.documentElement.setAttribute('data-theme', t.settings.theme); } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#/" aria-label="ComprePrep MIA home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M9 17.5l4.5 4.5L23 11" stroke="var(--on-accent)" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="brand-text">ComprePrep <b>MIA</b></span>
+      </a>
+      <nav class="mainnav" aria-label="Main">
+        <a href="#/" data-nav="home">Dashboard</a>
+        <a href="#/study" data-nav="study">Study guide</a>
+        <a href="#/practice" data-nav="practice">Practice</a>
+        <a href="#/bank" data-nav="bank">Q&amp;A bank</a>
+        <a href="#/mock" data-nav="mock">Mock test</a>
+        <a href="#/review" data-nav="review">Review</a>
+      </nav>
+      <div class="topbar-tools">
+        <form class="searchbox" role="search" data-form="search">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input type="search" name="q" placeholder="Search questions…" aria-label="Search all questions" autocomplete="off">
+        </form>
+        <button class="iconbtn" data-act="theme" title="Toggle light/dark theme" aria-label="Toggle light/dark theme">
+          <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="iconbtn" data-act="settings" title="Settings &amp; progress data" aria-label="Settings">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="7" r="2.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="17" r="2.2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1"></main>
+
+  <footer class="footer">
+    <p>Built from the CSE1907 question banks (2022 &amp; 2023 batches). Progress is saved in this browser only. Use <button class="linklike" data-act="settings">Settings</button> to export or import it.</p>
+  </footer>
+
+  <div class="modal-root" id="modal-root" hidden></div>
+  <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+  <div id="sr-status" class="sr-only" aria-live="polite"></div>
+
+  <noscript><p class="noscript">ComprePrep needs JavaScript enabled.</p></noscript>
+  <script src="data/questions.js"></script>
+  <script src="data/guides.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
